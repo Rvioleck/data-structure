@@ -1,0 +1,81 @@
+/*
+g(m,n)=0            m=0,n>=0
+g(m,n)=g(m-1,2n)+n  m>0,n>=0
+*/
+#include <stdlib.h>
+#include <stdio.h>
+#define Stack_Size 50
+typedef int StackElemType ;
+typedef struct {
+	StackElemType m[Stack_Size];
+	StackElemType n[Stack_Size];
+	int top;
+} SeqStack;
+
+void InitStack(SeqStack **S) {
+	*S = (SeqStack*)malloc(sizeof(SeqStack));
+	(*S)->top = -1;
+}
+
+int Push(SeqStack *S, StackElemType x,StackElemType y) {
+	if(S->top == Stack_Size-1) return false;
+	S->top++;
+	S->m[S->top] = x;
+	S->n[S->top] = y;
+	return true;
+}
+
+int Pop(SeqStack *S, StackElemType *x,StackElemType *y) {
+	if(S->top == -1) return false;
+	else {
+		*x = S->m[S->top];
+		*y = S->n[S->top];
+		S->top--;
+		return true;
+	}
+}
+
+int main() {
+	SeqStack *S;
+	InitStack(&S);
+	StackElemType m,n; //输入函数自变量m和n
+	printf("请输入m,n值:");
+	scanf("%d",&m);
+	getchar();
+	scanf("%d",&n);
+	StackElemType m1=m,n1=n;
+	while(m!=0) {
+		Push(S,m,n);
+		m--;
+		n*=2;
+	}
+	StackElemType y; //函数值y
+	while(S->top!=-1) {
+		Pop(S,&m,&n);
+		y+=n;
+	}
+	printf("g(%d,%d)=%d",m1,n1,y);
+}
+
+/*非递归算法*/
+/*
+int g(int m,int n){
+	int y=0;
+	if(m==0) return 0;
+	while(m!=0){
+		y+=n;
+		n*=2;
+		m--;
+	}
+	return y;
+}
+*/
+/*递归算法*/
+/*
+int g(int m,int n){
+	int y;
+	if(m==0) return 0;
+	if(m>0) y = n+g(m-1,2*n);
+	return y;
+}
+*/
