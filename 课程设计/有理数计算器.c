@@ -203,7 +203,9 @@ int main() {
 								break;
 							}
 							default: {
-
+								system("cls");
+								printf("\t\t\t\t=========请输入正确的序号===========\n");
+								continue;
 								break;
 							}
 						}
@@ -289,6 +291,12 @@ int main() {
 								return 0;
 								break;
 							}
+							default: {
+								system("cls");
+								printf("\t\t\t\t=========请输入正确的序号===========\n");
+								continue;
+								break;
+							}
 						}
 						break;
 					}
@@ -370,6 +378,12 @@ int main() {
 							}
 							case 3: {
 								return 0;
+								break;
+							}
+							default: {
+								system("cls");
+								printf("\t\t\t\t=========请输入正确的序号===========\n");
+								continue;
 								break;
 							}
 						}
