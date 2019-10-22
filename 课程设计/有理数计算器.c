@@ -8,7 +8,6 @@
 */
 #include <stdio.h>
 #include <stdlib.h>
-#include <dos.h>
 typedef struct {
 	int num; //分子 numerator
 	int den; //分母 denominator
@@ -135,8 +134,8 @@ int main() {
 		printf("\t\t\t\t==========②.求两数之差=============\n");
 		printf("\t\t\t\t==========③.求两数之积=============\n");
 		printf("\t\t\t\t==========④.退出程序  =============\n");
-		printf("\t\t\t\t====================================\n");
-		printf("请输入要进行的操作：");
+		printf("\t\t\t\t====================================\n\n\n");
+		printf("\t\t请输入要进行的操作：");
 		scanf("%d",&i);
 		switch(i) {
 			case 1: {
@@ -146,22 +145,26 @@ int main() {
 				printf("\t\t\t\t==========①.输入两个数=============\n");
 				printf("\t\t\t\t==========②.返回主页面=============\n");
 				printf("\t\t\t\t==========③.退出程序  =============\n");
-				printf("\t\t\t\t====================================\n");
+				printf("\t\t\t\t====================================\n\n\n");
 				int j=0;
-				printf("请输入要进行的操作：");
+				printf("\t\t请输入要进行的操作：");
 				scanf("%d",&j);
 				switch(j) {
 					case 1: {
 						system("cls");
 						printf("\t\t\t\t====================================\n");
 						printf("\t\t\t\t===========求两数之和===============\n");
-						printf("\t\t\t\t====================================\n");
-						printf("输入第一个数的分子和分母：");
+						printf("\t\t\t\t====================================\n\n\n");
+						printf("\t\t输入第一个数的分子和分母：");
 						int den1,num1;
-						scanf("%d%d",&num1,&den1);
-						printf("输入第二个数的分子和分母：");
+						scanf("%d",&num1);
+						getchar();
+						scanf("%d",&den1);
+						printf("\t\t输入第二个数的分子和分母：");
 						int den2,num2;
-						scanf("%d%d",&num2,&den2);
+						scanf("%d",&num2);
+						getchar();
+						scanf("%d",&den2);
 						system("cls");
 						Rational R1,R2;
 						InitRational(&R1);
@@ -176,20 +179,20 @@ int main() {
 						printf("\t\t\t\t==========①.查看结果的分子分母=====\n");
 						printf("\t\t\t\t==========②.返回主页面=============\n");
 						printf("\t\t\t\t==========③.退出程序  =============\n");
-						printf("\t\t\t\t====================================\n");
-						printf("%d/%d + %d/%d = %lf\n",num1,den1,num2,den2,R3.value);
-						printf("两数之和的结果为:%lf\n",R3.value);
+						printf("\t\t\t\t====================================\n\n\n");
+						printf("\t\t%d/%d + %d/%d = %lf\n",num1,den1,num2,den2,R3.value);
+						printf("\t\t两数之和的结果为:%lf\n",R3.value);
 						int k=0;
-						printf("请输入要进行的操作：");
+						printf("\t\t请输入要进行的操作：");
 						scanf("%d",&k);
 						switch(k) {
 							case 1: {
 								system("cls");
 								printf("\t\t\t\t====================================\n");
 								printf("\t\t\t\t===========求两数之和===============\n");
-								printf("\t\t\t\t====================================\n");
-								printf("%d/%d + %d/%d = %lf = %d/%d\n",num1,den1,num2,den2,R3.value,R3.num,R3.den);
-								printf("其分子为:%d\n其分母为:%d\n",R3.num,R3.den);
+								printf("\t\t\t\t====================================\n\n\n");
+								printf("\t\t%d/%d + %d/%d = %lf = %d/%d\n",num1,den1,num2,den2,R3.value,R3.num,R3.den);
+								printf("\t\t其分子为:%d\n\t\t其分母为:%d\n",R3.num,R3.den);
 								system("pause");
 								system("cls");
 								break;
@@ -204,7 +207,7 @@ int main() {
 							}
 							default: {
 								system("cls");
-								printf("\t\t\t\t=========请输入正确的序号===========\n");
+								printf("\t\t\t\t=========请输入正确的序号===========\n\n\n");
 								continue;
 								break;
 							}
@@ -221,7 +224,7 @@ int main() {
 					}
 					default: {
 						system("cls");
-						printf("\t\t\t\t=========请输入正确的序号===========\n");
+						printf("\t\t\t\t=========请输入正确的序号===========\n\n\n");
 						continue;
 						break;
 					}
@@ -235,22 +238,26 @@ int main() {
 				printf("\t\t\t\t==========①.输入两个数=============\n");
 				printf("\t\t\t\t==========②.返回主页面=============\n");
 				printf("\t\t\t\t==========③.退出程序  =============\n");
-				printf("\t\t\t\t====================================\n");
+				printf("\t\t\t\t====================================\n\n\n");
 				int j=0;
-				printf("请输入要进行的操作：");
+				printf("\t\t请输入要进行的操作：");
 				scanf("%d",&j);
 				switch(j) {
 					case 1: {
 						system("cls");
 						printf("\t\t\t\t====================================\n");
 						printf("\t\t\t\t===========求两数之差===============\n");
-						printf("\t\t\t\t====================================\n");
-						printf("输入第一个数的分子和分母：");
+						printf("\t\t\t\t====================================\n\n\n");
+						printf("\t\t输入第一个数的分子和分母：");
 						int den1,num1;
-						scanf("%d%d",&num1,&den1);
-						printf("输入第二个数的分子和分母：");
+						scanf("%d",&num1);
+						getchar();
+						scanf("%d",&den1);
+						printf("\t\t输入第二个数的分子和分母：");
 						int den2,num2;
-						scanf("%d%d",&num2,&den2);
+						scanf("%d",&num2);
+						getchar();
+						scanf("%d",&den2);
 						system("cls");
 						Rational R1,R2;
 						InitRational(&R1);
@@ -265,20 +272,20 @@ int main() {
 						printf("\t\t\t\t==========①.查看结果的分子分母=====\n");
 						printf("\t\t\t\t==========②.返回主页面=============\n");
 						printf("\t\t\t\t==========③.退出程序  =============\n");
-						printf("\t\t\t\t====================================\n");
-						printf("%d/%d - %d/%d = %lf\n",num1,den1,num2,den2,R3.value);
-						printf("两数之差的结果为:%lf\n",R3.value);
+						printf("\t\t\t\t====================================\n\n\n");
+						printf("\t\t%d/%d - %d/%d = %lf\n",num1,den1,num2,den2,R3.value);
+						printf("\t\t两数之差的结果为:%lf\n",R3.value);
 						int k=0;
-						printf("请输入要进行的操作：");
+						printf("\t\t请输入要进行的操作：");
 						scanf("%d",&k);
 						switch(k) {
 							case 1: {
 								system("cls");
 								printf("\t\t\t\t====================================\n");
 								printf("\t\t\t\t===========求两数之差===============\n");
-								printf("\t\t\t\t====================================\n");
-								printf("%d/%d - %d/%d = %lf = %d/%d\n",num1,den1,num2,den2,R3.value,R3.num,R3.den);
-								printf("其分子为:%d\n其分母为:%d\n",R3.num,R3.den);
+								printf("\t\t\t\t====================================\n\n\n");
+								printf("\t\t%d/%d - %d/%d = %lf = %d/%d\n",num1,den1,num2,den2,R3.value,R3.num,R3.den);
+								printf("\t\t其分子为:%d\n\t\t其分母为:%d\n",R3.num,R3.den);
 								system("pause");
 								system("cls");
 								break;
@@ -293,7 +300,7 @@ int main() {
 							}
 							default: {
 								system("cls");
-								printf("\t\t\t\t=========请输入正确的序号===========\n");
+								printf("\t\t\t\t=========请输入正确的序号===========\n\n\n");
 								continue;
 								break;
 							}
@@ -310,7 +317,7 @@ int main() {
 					}
 					default: {
 						system("cls");
-						printf("\t\t\t\t=========请输入正确的序号===========\n");
+						printf("\t\t\t\t=========请输入正确的序号===========\n\n\n");
 						continue;
 						break;
 					}
@@ -324,22 +331,26 @@ int main() {
 				printf("\t\t\t\t==========①.输入两个数=============\n");
 				printf("\t\t\t\t==========②.返回主页面=============\n");
 				printf("\t\t\t\t==========③.退出程序  =============\n");
-				printf("\t\t\t\t====================================\n");
+				printf("\t\t\t\t====================================\n\n\n");
 				int j=0;
-				printf("请输入要进行的操作：");
+				printf("\t\t请输入要进行的操作：");
 				scanf("%d",&j);
 				switch(j) {
 					case 1: {
 						system("cls");
 						printf("\t\t\t\t====================================\n");
 						printf("\t\t\t\t===========求两数之积===============\n");
-						printf("\t\t\t\t====================================\n");
-						printf("输入第一个数的分子和分母：");
+						printf("\t\t\t\t====================================\n\n\n");
+						printf("\t\t输入第一个数的分子和分母：");
 						int den1,num1;
-						scanf("%d%d",&num1,&den1);
-						printf("输入第二个数的分子和分母：");
+						scanf("%d",&num1);
+						getchar();
+						scanf("%d",&den1);
+						printf("\t\t输入第二个数的分子和分母：");
 						int den2,num2;
-						scanf("%d%d",&num2,&den2);
+						scanf("%d",&num2);
+						getchar();
+						scanf("%d",&den2);
 						system("cls");
 						Rational R1,R2;
 						InitRational(&R1);
@@ -354,20 +365,20 @@ int main() {
 						printf("\t\t\t\t==========①.查看结果的分子分母=====\n");
 						printf("\t\t\t\t==========②.返回主页面=============\n");
 						printf("\t\t\t\t==========③.退出程序  =============\n");
-						printf("\t\t\t\t====================================\n");
-						printf("%d/%d × %d/%d = %lf\n",num1,den1,num2,den2,R3.value);
-						printf("两数之积的结果为:%lf\n",R3.value);
+						printf("\t\t\t\t====================================\n\n\n");
+						printf("\t\t%d/%d × %d/%d = %lf\n",num1,den1,num2,den2,R3.value);
+						printf("\t\t两数之积的结果为:%lf\n",R3.value);
 						int k=0;
-						printf("请输入要进行的操作：");
+						printf("\t\t请输入要进行的操作：");
 						scanf("%d",&k);
 						switch(k) {
 							case 1: {
 								system("cls");
 								printf("\t\t\t\t====================================\n");
 								printf("\t\t\t\t===========求两数之积===============\n");
-								printf("\t\t\t\t====================================\n");
-								printf("%d/%d × %d/%d = %lf = %d/%d\n",num1,den1,num2,den2,R3.value,R3.num,R3.den);
-								printf("其分子为:%d\n其分母为:%d\n",R3.num,R3.den);
+								printf("\t\t\t\t====================================\n\n\n");
+								printf("\t\t%d/%d × %d/%d = %lf = %d/%d\n",num1,den1,num2,den2,R3.value,R3.num,R3.den);
+								printf("\t\t其分子为:%d\n\t\t其分母为:%d\n",R3.num,R3.den);
 								system("pause");
 								system("cls");
 								break;
@@ -382,7 +393,7 @@ int main() {
 							}
 							default: {
 								system("cls");
-								printf("\t\t\t\t=========请输入正确的序号===========\n");
+								printf("\t\t\t\t=========请输入正确的序号===========\n\n\n");
 								continue;
 								break;
 							}
@@ -399,7 +410,7 @@ int main() {
 					}
 					default: {
 						system("cls");
-						printf("\t\t\t\t=========请输入正确的序号===========\n");
+						printf("\t\t\t\t=========请输入正确的序号===========\n\n\n");
 						continue;
 						break;
 					}
@@ -412,7 +423,7 @@ int main() {
 			}
 			default: {
 				system("cls");
-				printf("\t\t\t\t=========请输入正确的序号===========\n");
+				printf("\t\t\t\t=========请输入正确的序号===========\n\n\n");
 				continue;
 				break;
 			}
